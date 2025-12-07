@@ -1,0 +1,343 @@
+* {
+    font-family: 'Nunito';
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.pageSelector {
+    position: fixed;
+    width: min(210px, 42vw, 42vh);
+    height: 100%;
+    background-color: #cb8b00;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-right: min(10px, 2vw, 2vh) solid #9e6c00;
+}
+
+.title h1 {
+    font-family: 'Titan One';
+    color: white;
+    text-align: center;
+    font-size: min(36px, 7.2vw, 7.2vh);
+    margin: min(15px, 3vw, 3vh) 0;
+    text-shadow: min(2px, 0.4vw, 0.4vh) min(2px, 0.4vw, 0.4vh) min(3px, 0.6vw, 0.6vh) rgb(0, 0, 0, 0.3);
+}
+
+.title h1:hover {
+    cursor: pointer;
+}
+
+.pages {
+    display: flex;
+    flex-direction: column;
+    margin: min(10px, 2vw, 2vh) 0 0;
+    color: white;
+    gap: min(10px, 2vw, 2vh);
+    width: 100%;
+}
+
+.page {
+    display: flex;
+    margin: 0;
+    width: min(205px, 41vw, 41vh);
+    gap: min(15px, 3vw, 3vh);
+    align-items: center;
+    justify-content: flex-start;
+    height: min(45px, 9vw, 9vh);
+    transition: all 0.2s;
+    border-top-right-radius: min(5px, 1vw, 1vh);
+    border-bottom-right-radius: min(5px, 1vw, 1vh);
+}
+
+.page h2 {
+    font-weight: 700;
+    font-size: min(22.5px, 4.5vw, 4.5vh);
+}
+
+i {
+    font-size: min(22.5px, 4.5vw, 4.5vh);
+    margin: 0 0 0 min(20px, 4vw, 4vh);
+    width: min(25px, 6.25vw, 6.25vh);
+    text-align: center;
+}
+
+.page:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #cb8b00;
+}
+
+.activePage {
+    cursor: pointer;
+    background-color: white;
+    color: #cb8b00;
+}
+
+.content {
+    margin-left: min(218px, 43.6vw, 43.6vh);
+    height: 100%;
+    width: calc(100% - min(218px, 43.6vw, 43.6vh));
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: min(40px, 8vw, 8vh);
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.getHoney {
+    display: flex;
+    margin: 0;
+    width: min(148px, 36vw, 36vh);
+    align-items: center;
+    height: min(45px, 9vw, 9vh);
+    transition: all 0.2s;
+    border-radius: min(5px, 1vw, 1vh);
+    color: white;
+    background-color: #ffae00;
+    box-shadow: 0 5px 0 #e29b00;
+    margin: min(8px, 2vw, 2vh) 0;
+    transition: all 0.2s;
+}
+
+.getHoney h2 {
+    font-family: 'Titan One';
+    font-size: min(24px, 6vw, 6vh);
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.getHoney:hover {
+    background-color: #ffb71c;
+    box-shadow: 0 7px 0 #df9d10;
+    transform: translateY(-2px);
+}
+
+.getHoney:active {
+    background-color: #ffb71c;
+    box-shadow: 0 3px 0 #df9d10;
+    transform: translateY(2px);
+    transition: all 0.1s;
+}
+
+.background {
+    margin-left: min(218px, 43.6vw, 43.6vh);
+    height: 100%;
+    width: calc(100% - min(218px, 43.6vw, 43.6vh));
+    position: fixed;
+    background: #ffe551;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: -500%;
+    left: -500%;
+    width: 1000%;
+    height: 1000%;
+    background: url("./assets/WhiteHiveCheckers.png") repeat center/cover;
+    background-size: 300px;
+    transform: rotate(25deg);
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.profile {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    display: flex;
+    padding: 5px;
+    margin: 0;
+    justify-content: left;
+    align-items: center;
+    background-color: #a77200;
+    box-shadow: 0 8px 0 #7f5700;
+    border-bottom-left-radius: 10px;
+    gap: 2px;
+    min-width: 190px;
+    height: 37px;
+    cursor: pointer;
+}
+
+.profile img {
+    display: block;
+    width: 30px;
+    z-index: 2;
+    margin: 0 8px 0 5px;
+}
+
+.profile h1 {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    font-weight: 500;
+}
+
+.profile i {
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+    right: 5px;
+    position: absolute;
+    background-color: #a77200;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.profile i:hover {
+    color: #a77200;
+    background-color: white;
+}
+
+.smallWidthUp {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    background-color: #a77200;
+    border-bottom: 5px solid #7f5700;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upTitle h1 {
+    font-family: 'Titan One';
+    color: white;
+    text-align: center;
+    font-size: min(32.5px, 6.5vw, 6.5vh);
+    margin: min(3px, 0.6vw, 0.6vh) min(15px, 3vw, 3vh);
+    text-shadow: min(2px, 0.4vw, 0.4vh) min(2px, 0.4vw, 0.4vh) min(3px, 0.6vw, 0.6vh) rgb(0, 0, 0, 0.3);
+}
+
+.upTitle h1:hover {
+    cursor: pointer;
+}
+
+svg {
+    width: 60px;
+    height: 50px;
+    margin: min(2px, 0.4vw, 0.4vh) min(14px, 2.8vw, 2.8vh);
+    top: -3.5px;
+    right: -5px;
+    position: absolute;
+    z-index: 3;
+}
+
+svg:hover {
+    cursor: pointer;
+}
+
+.shadow {
+    top: -2px;
+    right: -6px;
+    opacity: 0.3;
+    z-index: 2;
+}
+
+.pageSelectorRight {
+    position: fixed;
+    width: min(210px, 42vw, 42vh);
+    height: 100%;
+    background-color: #cb8b00;
+    top: 0;
+    margin-left: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 5;
+    transition: all 0.2s;
+}
+
+.quitRight {
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.pageSelectorRight .getHoney {
+    margin-top: 50px;
+}
+
+.graybg {
+    display: none;
+    opacity: 0.3;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    position: fixed;
+    margin: 0;
+    top: 0;
+}
+
+@media (max-width: 879px) {
+    .pageSelector, .profile {
+        display: none;
+    }
+
+    .background {
+        width: 100%;
+        margin-left: 0;
+        height: calc(100% - 27.5px);
+    }
+
+    .content {
+        width: 100%;
+        margin-left: 0;
+        min-height: calc(100vh - 50px);
+        margin-top: 50px;
+        overflow-y: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    .smallWidthUp, .pageSelectorRight {
+        display: flex;
+    }
+}
+
+@media (min-width: 880px) {
+    .pageSelector, .profile {
+        display: flex;
+    }
+
+    .smallWidthUp, .pageSelectorRight, .graybg {
+        display: none;
+    }
+}

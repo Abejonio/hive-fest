@@ -1,0 +1,83 @@
+.markettitle {
+    font-size: min(40px, 8vw, 8vh);
+    width: 90%;
+    font-family: 'Titan One';
+}
+
+.packs {
+    width: 90%;
+    padding: 0 min(50px, 10vw, 10vh);
+    display: flex;
+    flex-wrap: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.pack {
+    width: min(220px, 44vw, 44vh);
+    height: min(220px, 44vw, 44vh);
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-radius: min(15px, 3vw, 3vh);
+    box-shadow: 0 12px 25px rgba(120, 80, 0, 1);
+    transition: all 0.2s;
+}
+
+.pack:hover {
+    transform: scale(0.95);
+    cursor: pointer;
+}
+
+.back {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(10deg);
+    height: min(180px, 36vw, 36vh);
+    filter: brightness(1000);
+    opacity: 0.6;
+}
+
+.front {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(10deg);
+    height: min(165px, 33vw, 33vh);
+    z-index: 1;
+}
+
+.hive {
+    background: radial-gradient(circle at center, #ffef96 50%, #ffd700);
+    box-shadow: 0 min(10px, 2vw, 2vh) #e6c400;
+}
+
+.price img {
+    height: min(30px, 6vw, 6vh);
+    transform: rotate(10deg);
+    margin: 0;
+}
+
+.price h2 {
+    margin: 0 0 min(3px, 0.6vw, 0.6vh);
+    font-family: 'Titan One';
+    font-size: min(25px, 5vw, 5vh);
+}
+
+.price {
+    position: absolute;
+    bottom: 2%;
+    left: 0%;
+    transform: translate(10%, -10%);
+    background-color: rgba(0,0,0,0.3);
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-radius: min(10px, 2vw, 2vh);
+    padding: min(2.5px, 0.5vw, 0.5vh) min(5px, 1vw, 1vh);
+    gap: min(5px, 1vw, 1vh);
+}

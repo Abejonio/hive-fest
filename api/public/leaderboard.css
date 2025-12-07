@@ -1,0 +1,212 @@
+.lbs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: min(5px, 1vw, 1vh);
+    justify-content: center;
+    background: #a77200;
+    border-radius: min(10px, 2vw, 2vh);
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: min(25px, 5vw, 5vh);
+    box-sizing: border-box;
+    box-shadow: 0 min(10px, 2vw, 2vh) 0 #7f5700;
+}
+
+.init {
+    height: min(80px, 16vw, 16vh);
+    background-color: #dd9700;
+    border-radius: min(10px, 2vw, 2vh);
+    box-shadow: 0 min(10px, 2vw, 2vh) 0 #c28400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    margin: min(10px, 2vw, 2vh);
+    margin-bottom: min(20px, 4vw, 4vh);
+    position: relative;
+    transition: all 0.2s;
+}
+
+.init h1 {
+    margin: 0 auto;
+    font-size: min(32px, 6.4vw, 6.4vh);
+    font-family: 'Titan One';
+    text-align: center;
+}
+
+.lbtitle {
+    margin: 0 auto;
+    color: #ffffff;
+    text-shadow: min(2px, 0.4vw, 0.4vh) min(2px, 0.4vw, 0.4vh) min(3px, 0.6vw, 0.6vh) rgb(0, 0, 0, 0.3);
+}
+
+.lbtitle h1 {
+    font-size: min(65px, 13vw, 13vh);
+    font-family: 'Titan One';
+    text-align: center;
+}
+
+.init:hover {
+    cursor: pointer;
+    background-color: #ffae00;
+    transform: translateY(-3px);
+    box-shadow: 0 calc(3px + min(10px, 2vw, 2vh)) 0 #e59c00;
+}
+
+.init:active {
+    transition: all 0.1s;
+    background-color: #ffae00;
+    transform: translateY(5px);
+    box-shadow: 0 calc(-5px + min(10px, 2vw, 2vh)) 0 #e59c00;
+}
+
+.newLbTitle {
+    color: white;
+    margin: min(20px, 4vw, 4vh) 0;
+    text-shadow: min(1px, 0.2vw, 0.2vh) min(1px, 0.2vw, 0.2vh) min(1.5px, 0.3vw, 0.3vh) rgb(0, 0, 0, 0.3);
+}
+
+.newLbTitle h1 {
+    font-family: 'Titan One';
+    font-size: min(50px, 10vw, 10vh);
+    text-align: center;
+    margin: 0;
+}
+
+.firstSec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    flex-direction: column;
+}
+
+.lbSelector {
+    display: flex;
+    background-color: #7a4b00;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: min(10px, 2vw, 2vh);
+    border-radius: min(5px, 1vw, 1vh);
+    padding: min(10px, 2vw, 2vh);
+    flex-wrap: wrap;
+}
+
+.new {
+    height: min(70px, 16vw, 16vh);
+    position: relative;
+    width: min(100px, 20vw, 20vh);    
+    background-color: #a86a00;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: min(7.5px, 1.5vw, 1.5vh);
+    padding: 0 min(10px, 2vw, 2vh);
+    transition: all 0.2s;
+}
+
+.new:hover {
+    cursor: pointer;
+    background-color: #d48a1f;
+}
+
+.new h1 {
+    font-family: 'Titan One';
+    text-align: center;
+    font-size: min(20px, 4vw, 4vh);
+}
+
+.selectedNew {
+    color: #a86a00 !important;
+    background-color: white !important;
+}
+
+.lbSec {
+    margin-top: min(30px, 6vw, 6vh);
+    background-color: #d48a1f;
+    display: flex;
+    width: 85%;
+    position: relative;
+    border-radius: min(10px, 2vw, 2vh);
+    padding: min(10px, 2vw, 2vh);
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lbPlayer {
+    display: flex;
+    width: 100%;
+    position: relative;
+    border-radius: min(10px, 2vw, 2vh);
+    background-color: #f5b942;
+    height: min(70px, 14vw, 14vh);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lbPlayer h1 {
+    font-family: 'Nunito';
+    color: white;
+    font-size: 30px;
+}
+
+.lbPlayer img {
+    width: min(60px, 10vw, 10vh);
+    height: min(60px, 10vw, 10vh);
+    transform: rotate(10deg);
+}
+
+.play1, .play2 {
+    display: flex;
+    align-items: center;
+}
+
+.play1 {
+    margin-left: min(8px, 1.6vw, 1.6vh);
+    gap: min(5px, 1vw, 1vh);
+}
+
+.play1 h1, .play2 h1 {
+    font-size: min(25px, 5vw, 5vh);
+}
+
+.content {
+    overflow-y: auto;
+    padding-top: 10px;
+    padding-bottom: 0 !important;
+}
+
+.content > :first-child {
+    margin-top: 0;
+}
+
+.top {
+    width: min(70px, 14vw, 14vh);
+    text-align: center;
+    position: relative;
+}
+
+.tr {
+    transition: all 0.2s;
+}
+
+@media (max-width: 580px) {
+    .new {
+        width: min(200px, 40vw, 40vh);
+    }
+    .lbSelector {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .lbs {
+        width: min(580px, 90vw, 90vh);
+    }
+}

@@ -1,0 +1,100 @@
+.displayedStats {
+    position: relative;
+    margin: min(40px, 8vw, 8vh) auto 0;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    gap: min(20px, 4vw, 4vh);
+}
+
+.main {
+    display: flex;
+    width: 90%;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.favImage {
+    width: min(100px, 20vw, 20vh);
+}
+
+.banner {
+    height: min(90px, 20vw, 20vw);
+    width: min(300px, 80vw, 80vh);
+    display: flex;
+    flex-direction: column;
+    background: #ffae00;
+    box-shadow: 0 min(10px, 2vw, 2vh) 0 #e29b00;
+    border-radius: min(10px, 2vw, 2vh);
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.banner h1 {
+    color: white;
+    font-size: min(35px, 7vw, 7vh);
+    font-family: 'Titan One';
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.banner h2 {
+    color: white;
+    font-size: min(17.5px, 3.5vw, 3.5vh);
+    font-family: 'Nunito';
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.secondary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: min(5px, 1vw, 1vh);
+    justify-content: center;
+    background: #a77200;
+    border-radius: min(10px, 2vw, 2vh);
+    width: 90%;
+    margin: 0 auto;
+    padding: min(25px, 5vw, 5vh);
+    box-sizing: border-box;
+}
+
+.secondaryStat {
+    width: min(220px, 44vw, 44vh);
+    height: min(80px, 16vw, 16vh);
+    background-color: #dd9700;
+    border-radius: min(10px, 2vw, 2vh);
+    box-shadow: 0 min(10px, 2vw, 2vh) 0 #c28400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    margin: min(10px, 2vw, 2vh);
+    margin-bottom: min(20px, 4vw, 4vh);
+    position: relative;
+}
+
+.secondaryStat h2 {
+    margin: 0 auto;
+    font-size: min(35px, 7vw, 7vh);
+    font-family: 'Titan One';
+}
+
+.secondaryStat h3 {
+    margin: 0 auto;
+    font-size: min(15px, 3vw, 3vh);
+}
+
+.secondaryStat img {
+    position: absolute;
+    transform: rotate(-15deg);
+    bottom: max(-10px, -2vw, -2vh);
+    left: max(-20px, -4vw, -4vh);
+    width: min(60px, 12vw, 12vh);
+}

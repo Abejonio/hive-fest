@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign Up | Hive Fest</title>
+        <link href="./signup.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="./assets/HiveFest.png">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Titan+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <script type="module" src="./signup.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1 class="title">Hive Fest</h1>
+            <div class="login headerRight"><button>Login</button></div>
+        </div>
+        <div class="content">
+            <div class="signup">
+                <h1>Sign Up</h1>
+                <input id="username" type="text" placeholder="Username">
+                <input id="password" type="password" placeholder="Password">
+                <div class="terms">
+                    <input type="checkbox" id="acceptTerms" />
+                    <label for="acceptTerms">
+                        I have read and agree to the
+                        <a href="./terms.html" target="_blank" rel="noopener">Terms of Use</a>
+                        and
+                        <a href="./privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.
+                    </label>
+                </div>
+
+                <button id="signupBtn">Sign Up</button>
+                <p class="error" id="errorMsg"></p>
+            </div>
+        </div>
+    </body>
+</html>
