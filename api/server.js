@@ -99,6 +99,7 @@ app.get("/", (req, res) => res.sendFile(path.join(__dirname, "public", "start.ht
 const USERS_PATH = path.join(__dirname, "users.json");  // Perfiles del juego (público)
 const AUTH_PATH  = path.join(__dirname, "auth.json");   // Datos sensibles (hashes/IPs)
 const WHITELIST_PATH = path.join(__dirname, "ip_whitelist.json");
+const COLLECTIONS_PATH = path.join(__dirname, "collections.json");
 
 function readWhitelist() {
   return JSON.parse(fs.readFileSync(WHITELIST_PATH, "utf-8"));
@@ -110,19 +111,31 @@ function ensureFile(file, initObj) {
 }
 ensureFile(USERS_PATH, { users: {} });            // users.json: { users: {} }
 ensureFile(AUTH_PATH,  { auth:  {} });            // auth.json:  { auth:  {} }
+ensureFile(COLLECTIONS_PATH, { collections: {} });
 
-// 10) Helpers para leer/escribir “DBs”
-function readUsersDB() {                           // Lee users.json completo
+// 10) Databases Functions
+// Stats+Questions Databases
+function readUsersDB() {
   return JSON.parse(fs.readFileSync(USERS_PATH, "utf-8"));
 }
-function writeUsersDB(db) {                        // Escribe users.json formateado
+function writeUsersDB(db) {
   fs.writeFileSync(USERS_PATH, JSON.stringify(db, null, 2));
 }
-function readAuthDB() {                            // Lee auth.json completo
+
+// Users/Passwords Databases
+function readAuthDB() {
   return JSON.parse(fs.readFileSync(AUTH_PATH, "utf-8"));
 }
-function writeAuthDB(db) {                         // Escribe auth.json formateado
+function writeAuthDB(db) {
   fs.writeFileSync(AUTH_PATH, JSON.stringify(db, null, 2));
+}
+
+// Collections Databases
+function readCollectionsDB() {
+  return JSON.parse(fs.readFileSync(COLLECTIONS_PATH, "utf-8"));
+}
+function writeCollectionsDB(db) {
+  fs.writeFileSync(COLLECTIONS_PATH, JSON.stringify(db, null, 2));
 }
 
 // 11) Esquemas de validación (Zod) con tus reglas
@@ -291,9 +304,27 @@ function findAuthByUsernameLower(authDB, unameLower) {
 
 // 16) Genera un ID único que no exista en users.json
 function generateUniqueId(usersDB) {
-  let id;
-  do { id = nanoid(12); } while (usersDB.users[id]); // Repite si colisiona (muy poco probable)
-  return id;
+  const ids = Object.keys(usersDB.users).map(Number);
+
+  // Si no existen usuarios todavía → ID inicial
+  if (ids.length === 0) {
+    return "1"; // o el número inicial que quieras
+  }
+
+  const lastId = Math.max(...ids);
+
+  // Número de dígitos del último ID
+  const length = String(lastId).length;
+
+  // Incremento máximo = (length * 5) ^ 1.25
+  const maxIncrement = Math.round(Math.pow(length * 5, 1.25));
+
+  // Incremento aleatorio entre 1 y maxIncrement
+  const increment = Math.floor(Math.random() * maxIncrement) + 1;
+
+  const newId = lastId + increment;
+
+  return String(newId);
 }
 
 // 17) Anti-bruteforce con retardo progresivo por IP (NO bloquea cuentas)
