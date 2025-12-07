@@ -33,9 +33,9 @@ body {
     margin: auto min(12px, 3vw, 3vh);
     font-size: min(40px, 8vw, 8vh);
     padding: min(4px, 1vw, 1vh) min(8px, 2vw, 2vh);
-    background-color: #cefbff;
+    background-color: #ffd700;
     border-radius: min(5px, 1vw, 1vh);
-    box-shadow: min(5px, 1vw, 1vh) min(5px, 1vw, 1vh) 0px #99fcff;
+    box-shadow: min(5px, 1vw, 1vh) min(5px, 1vw, 1vh) 0px #ddbc00;
     cursor: pointer;
 }
 
@@ -77,7 +77,7 @@ body {
 .welcome {
     position: relative;
     flex: 9;
-    background: linear-gradient(to right, #ffe659, #eac700);
+    background: linear-gradient(to right, #cefbff, #98f6ff);
     overflow: hidden;
     z-index: 1;
     display: flex;
