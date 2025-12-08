@@ -33,9 +33,11 @@ body {
     margin: auto min(12px, 3vw, 3vh);
     font-size: min(40px, 8vw, 8vh);
     padding: min(4px, 1vw, 1vh) min(8px, 2vw, 2vh);
-    background-color: #ffd700;
+    /* Normal Color: background-color: #ffd700; */
+    background-color: #98f6ff;
     border-radius: min(5px, 1vw, 1vh);
-    box-shadow: min(5px, 1vw, 1vh) min(5px, 1vw, 1vh) 0px #ddbc00;
+    /*     box-shadow: min(5px, 1vw, 1vh) min(5px, 1vw, 1vh) 0px #ddbc00; */
+    box-shadow: min(5px, 1vw, 1vh) min(5px, 1vw, 1vh) 0px #77c1c8;
     cursor: pointer;
 }
 
@@ -47,29 +49,38 @@ body {
 
 .headerRight button, .welcome button {
     padding: min(4px, 1vw, 1vh) min(8px, 2vw, 2vh);
-    background-color: #ffd700;
-    border: min(3px, 0.6vw, 0.6vh) solid #ddbc00;
+    /* Normal: background-color: #ffd700; */
+    background-color: #98f6ff;
+    /* border: min(3px, 0.6vw, 0.6vh) solid #ddbc00; */
+    border: min(3px, 0.6vw, 0.6vh) solid #77c1c8;
     font-size: min(25px, 5vw, 5vh);
     font-weight: 800;
     color: white;
-    box-shadow: 0 min(5px, 1vw, 1vh) 0 #caac00;
+    /* box-shadow: 0 min(5px, 1vw, 1vh) 0 #caac00; */
+    box-shadow: 0 min(5px, 1vw, 1vh) 0 #63c1ca;
     border-radius: min(10px, 2vw, 2vh);
     transition: all 0.2s;
 }
 
 .headerRight button:hover, .welcome button:hover {
     transform: translateY(-2px);
-    border: min(3px, 0.6vw, 0.6vh) solid #f3ce00;
-    box-shadow: 0 min(7px, 1.4vw, 1.4vh) 0 #edca00;
-    background-color: #ffe135;
+    /* border: min(3px, 0.6vw, 0.6vh) solid #f3ce00; */
+    border: min(3px, 0.6vw, 0.6vh) solid #7ddce4;
+    /* box-shadow: 0 min(7px, 1.4vw, 1.4vh) 0 #edca00; */
+    box-shadow: 0 min(7px, 1.4vw, 1.4vh) 0 #7ee0e9;
+    /* background-color: #ffe135; */
+    background-color: #a0f7ff;
     cursor: pointer;
 }
 
 .headerRight button:active, .welcome button:active {
     transform: translateY(min(5px, 1vw, 1vh));
-    border: min(3px, 0.6vw, 0.6vh) solid #f3ce00;
-    box-shadow: 0 0 0 #edca00;
-    background-color: #ffe135;
+    /* border: min(3px, 0.6vw, 0.6vh) solid #f3ce00; */
+    border: min(3px, 0.6vw, 0.6vh) solid #7ddce4;
+    /* box-shadow: 0 0 0 #edca00; */
+    box-shadow: 0 0 0 #7ee0e9;
+    /* background-color: #ffe135; */
+    background-color: #a0f7ff;
     cursor: pointer;
     transition: all 0.05s;
 }
@@ -77,6 +88,7 @@ body {
 .welcome {
     position: relative;
     flex: 9;
+    /*  Normal Background: background: linear-gradient(to right, #ffe659, #eac700); */
     background: linear-gradient(to right, #cefbff, #98f6ff);
     overflow: hidden;
     z-index: 1;
